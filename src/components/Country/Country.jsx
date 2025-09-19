@@ -1,8 +1,8 @@
 import React from "react";
-import "./Country.css"
+import "./Country.css";
 
 const Country = ({ country }) => {
-  console.log(country);
+  console.log(country.area.area);
 
   return (
     <div className="country">
@@ -15,6 +15,15 @@ const Country = ({ country }) => {
       <p>Population : {country.population.population}</p>
 
       <p>region : {country.region.region}</p>
+
+      <p>
+        Area : {country.area.area} and
+        {country.area.area === 147570
+          ? "This is Bangladesh"
+          : country.area.area > 147570
+          ? "Bigger then Bangladesh"
+          : "Smaller then Bangladesh"}
+      </p>
 
       {/* <h5>Languages : {country.languages.languages}</h5> */}
 

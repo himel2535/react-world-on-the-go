@@ -4,6 +4,7 @@ import "./Countries.css";
 
 const Countries = ({ countriesPromise }) => {
   const countriesData = use(countriesPromise);
+  
   const countries = countriesData.countries;
 
   return (
