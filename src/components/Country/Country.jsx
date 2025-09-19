@@ -30,7 +30,13 @@ const Country = ({ country }) => {
   };
 
   return (
-    <div className="country">
+
+    // -----one way to apply css by conditional rendering--
+    // <div className={`country ${visited? 'country-visited' : 'country-not-visited'}`}>
+
+    // ---another way to apply conditional rendering----
+
+    <div className={`country ${visited && 'country-visited'}`}>
       <img src={country.flags.flags.png} alt="" />
 
       <h3>Name :{country.name.common}</h3>
