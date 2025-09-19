@@ -1,10 +1,11 @@
 import React from "react";
+import "./Country.css"
 
 const Country = ({ country }) => {
   console.log(country);
 
   return (
-    <div>
+    <div className="country">
       <img src={country.flags.flags.png} alt="" />
 
       <h3>Name :{country.name.common}</h3>
