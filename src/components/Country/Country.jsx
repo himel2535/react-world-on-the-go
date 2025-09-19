@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Country.css";
 
 const Country = ({ country }) => {
-  console.log(country.area.area);
+  //   console.log(country.area.area);
+
+  const [visited, setVisited] = useState(false);
+
+  const handleVisited = () => {
+
+    // ---fixed---
+    // setVisited(true);
+
+    // ---by if else for changing btn operation---
+
+    // if(visited){
+    //     setVisited(false)
+    // }
+    // else{
+    //     setVisited(true)
+    // }
+
+    // ----by ternary operator--
+
+    // setVisited(visited? false : true)
+
+    // ---shortcut way---
+
+    setVisited(!visited)
+  };
 
   return (
     <div className="country">
@@ -24,6 +49,10 @@ const Country = ({ country }) => {
           ? "Bigger then Bangladesh"
           : "Smaller then Bangladesh"}
       </p>
+
+      <button onClick={handleVisited}>
+        {visited ? "Visited" : "Not Visited"}
+      </button>
 
       {/* <h5>Languages : {country.languages.languages}</h5> */}
 
